@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Person">
+        <attribute name="about" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="alive" attributeType="Boolean" syncable="YES"/>
+        <attribute name="id" attributeType="String" indexed="YES">
+            <userInfo/>
+        </attribute>
+        <attribute name="name" optional="YES" syncable="YES"/>
+        <attribute name="udid" optional="YES" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-5688" positionY="-7425" width="128" height="118"/>
+    </elements>
+</model>

@@ -12,16 +12,19 @@
 		542ACDAD18ADFE54000D38EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542ACDAC18ADFE54000D38EA /* UIKit.framework */; };
 		542ACDB318ADFE54000D38EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 542ACDB118ADFE54000D38EA /* InfoPlist.strings */; };
 		542ACDB518ADFE54000D38EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACDB418ADFE54000D38EA /* main.m */; };
-		542ACDB918ADFE54000D38EA /* ITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACDB818ADFE54000D38EA /* ITAppDelegate.m */; };
 		542ACDBC18ADFE54000D38EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542ACDBA18ADFE54000D38EA /* Main.storyboard */; };
-		542ACDBF18ADFE54000D38EA /* ITFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACDBE18ADFE54000D38EA /* ITFirstViewController.m */; };
-		542ACDC218ADFE54000D38EA /* ITSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACDC118ADFE54000D38EA /* ITSecondViewController.m */; };
 		542ACDC418ADFE54000D38EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542ACDC318ADFE54000D38EA /* Images.xcassets */; };
 		542ACDCB18ADFE54000D38EA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542ACDCA18ADFE54000D38EA /* XCTest.framework */; };
 		542ACDCC18ADFE54000D38EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542ACDA818ADFE54000D38EA /* Foundation.framework */; };
 		542ACDCD18ADFE54000D38EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542ACDAC18ADFE54000D38EA /* UIKit.framework */; };
 		542ACDD518ADFE54000D38EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 542ACDD318ADFE54000D38EA /* InfoPlist.strings */; };
 		542ACDD718ADFE54000D38EA /* YapBenchmarksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACDD618ADFE54000D38EA /* YapBenchmarksTests.m */; };
+		542ACDE318AE0EA9000D38EA /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 542ACDE218AE0EA9000D38EA /* dummy.json */; };
+		542ACE3818AE0F74000D38EA /* ITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3018AE0F74000D38EA /* ITAppDelegate.m */; };
+		542ACE3918AE0F74000D38EA /* ITFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3218AE0F74000D38EA /* ITFirstViewController.m */; };
+		542ACE3A18AE0F74000D38EA /* ITSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3418AE0F74000D38EA /* ITSecondViewController.m */; };
+		542ACE3B18AE0F74000D38EA /* YapBenchmarks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3618AE0F74000D38EA /* YapBenchmarks.xcdatamodeld */; };
+		A378F63DC512444A978AC280 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13108632914841CA8B6B9126 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13108632914841CA8B6B9126 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		542ACDA518ADFE54000D38EA /* YapBenchmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YapBenchmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		542ACDA818ADFE54000D38EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		542ACDAA18ADFE54000D38EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -43,19 +47,22 @@
 		542ACDB218ADFE54000D38EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		542ACDB418ADFE54000D38EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		542ACDB618ADFE54000D38EA /* YapBenchmarks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YapBenchmarks-Prefix.pch"; sourceTree = "<group>"; };
-		542ACDB718ADFE54000D38EA /* ITAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITAppDelegate.h; sourceTree = "<group>"; };
-		542ACDB818ADFE54000D38EA /* ITAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITAppDelegate.m; sourceTree = "<group>"; };
 		542ACDBB18ADFE54000D38EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		542ACDBD18ADFE54000D38EA /* ITFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITFirstViewController.h; sourceTree = "<group>"; };
-		542ACDBE18ADFE54000D38EA /* ITFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITFirstViewController.m; sourceTree = "<group>"; };
-		542ACDC018ADFE54000D38EA /* ITSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ITSecondViewController.h; sourceTree = "<group>"; };
-		542ACDC118ADFE54000D38EA /* ITSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITSecondViewController.m; sourceTree = "<group>"; };
-		542ACDC318ADFE54000D38EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		542ACDC318ADFE54000D38EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../YapBenchmarks/Images.xcassets; sourceTree = "<group>"; };
 		542ACDC918ADFE54000D38EA /* YapBenchmarksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YapBenchmarksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		542ACDCA18ADFE54000D38EA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		542ACDD218ADFE54000D38EA /* YapBenchmarksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YapBenchmarksTests-Info.plist"; sourceTree = "<group>"; };
 		542ACDD418ADFE54000D38EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		542ACDD618ADFE54000D38EA /* YapBenchmarksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YapBenchmarksTests.m; sourceTree = "<group>"; };
+		542ACDE218AE0EA9000D38EA /* dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummy.json; sourceTree = "<group>"; };
+		542ACE2F18AE0F74000D38EA /* ITAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITAppDelegate.h; sourceTree = "<group>"; };
+		542ACE3018AE0F74000D38EA /* ITAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITAppDelegate.m; sourceTree = "<group>"; };
+		542ACE3118AE0F74000D38EA /* ITFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITFirstViewController.h; sourceTree = "<group>"; };
+		542ACE3218AE0F74000D38EA /* ITFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITFirstViewController.m; sourceTree = "<group>"; };
+		542ACE3318AE0F74000D38EA /* ITSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSecondViewController.h; sourceTree = "<group>"; };
+		542ACE3418AE0F74000D38EA /* ITSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSecondViewController.m; sourceTree = "<group>"; };
+		542ACE3718AE0F74000D38EA /* YapBenchmarks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YapBenchmarks.xcdatamodel; sourceTree = "<group>"; };
+		74F91329579F4244A49B5664 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +73,7 @@
 				542ACDAB18ADFE54000D38EA /* CoreGraphics.framework in Frameworks */,
 				542ACDAD18ADFE54000D38EA /* UIKit.framework in Frameworks */,
 				542ACDA918ADFE54000D38EA /* Foundation.framework in Frameworks */,
+				A378F63DC512444A978AC280 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +97,8 @@
 				542ACDD018ADFE54000D38EA /* YapBenchmarksTests */,
 				542ACDA718ADFE54000D38EA /* Frameworks */,
 				542ACDA618ADFE54000D38EA /* Products */,
+				542ACDE118AE0EA9000D38EA /* Resources */,
+				74F91329579F4244A49B5664 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +118,7 @@
 				542ACDAA18ADFE54000D38EA /* CoreGraphics.framework */,
 				542ACDAC18ADFE54000D38EA /* UIKit.framework */,
 				542ACDCA18ADFE54000D38EA /* XCTest.framework */,
+				13108632914841CA8B6B9126 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,15 +126,10 @@
 		542ACDAE18ADFE54000D38EA /* YapBenchmarks */ = {
 			isa = PBXGroup;
 			children = (
-				542ACDB718ADFE54000D38EA /* ITAppDelegate.h */,
-				542ACDB818ADFE54000D38EA /* ITAppDelegate.m */,
-				542ACDBA18ADFE54000D38EA /* Main.storyboard */,
-				542ACDBD18ADFE54000D38EA /* ITFirstViewController.h */,
-				542ACDBE18ADFE54000D38EA /* ITFirstViewController.m */,
-				542ACDC018ADFE54000D38EA /* ITSecondViewController.h */,
-				542ACDC118ADFE54000D38EA /* ITSecondViewController.m */,
-				542ACDC318ADFE54000D38EA /* Images.xcassets */,
+				542ACE2E18AE0F74000D38EA /* Classes */,
+				542ACE3518AE0F74000D38EA /* Model */,
 				542ACDAF18ADFE54000D38EA /* Supporting Files */,
+				542ACE3C18AE0F78000D38EA /* User Interface */,
 			);
 			path = YapBenchmarks;
 			sourceTree = "<group>";
@@ -157,6 +163,44 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		542ACDE118AE0EA9000D38EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				542ACDC318ADFE54000D38EA /* Images.xcassets */,
+				542ACDE218AE0EA9000D38EA /* dummy.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		542ACE2E18AE0F74000D38EA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				542ACE2F18AE0F74000D38EA /* ITAppDelegate.h */,
+				542ACE3018AE0F74000D38EA /* ITAppDelegate.m */,
+				542ACE3118AE0F74000D38EA /* ITFirstViewController.h */,
+				542ACE3218AE0F74000D38EA /* ITFirstViewController.m */,
+				542ACE3318AE0F74000D38EA /* ITSecondViewController.h */,
+				542ACE3418AE0F74000D38EA /* ITSecondViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		542ACE3518AE0F74000D38EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				542ACE3618AE0F74000D38EA /* YapBenchmarks.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		542ACE3C18AE0F78000D38EA /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				542ACDBA18ADFE54000D38EA /* Main.storyboard */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 542ACDDA18ADFE54000D38EA /* Build configuration list for PBXNativeTarget "YapBenchmarks" */;
 			buildPhases = (
+				30B58A4EB6FF4A9BA2954455 /* Check Pods Manifest.lock */,
 				542ACDA118ADFE54000D38EA /* Sources */,
 				542ACDA218ADFE54000D38EA /* Frameworks */,
 				542ACDA318ADFE54000D38EA /* Resources */,
+				C58024294DF04003B12DDF52 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +282,7 @@
 			files = (
 				542ACDC418ADFE54000D38EA /* Images.xcassets in Resources */,
 				542ACDB318ADFE54000D38EA /* InfoPlist.strings in Resources */,
+				542ACDE318AE0EA9000D38EA /* dummy.json in Resources */,
 				542ACDBC18ADFE54000D38EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,15 +297,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30B58A4EB6FF4A9BA2954455 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C58024294DF04003B12DDF52 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		542ACDA118ADFE54000D38EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				542ACDBF18ADFE54000D38EA /* ITFirstViewController.m in Sources */,
+				542ACE3918AE0F74000D38EA /* ITFirstViewController.m in Sources */,
 				542ACDB518ADFE54000D38EA /* main.m in Sources */,
-				542ACDB918ADFE54000D38EA /* ITAppDelegate.m in Sources */,
-				542ACDC218ADFE54000D38EA /* ITSecondViewController.m in Sources */,
+				542ACE3B18AE0F74000D38EA /* YapBenchmarks.xcdatamodeld in Sources */,
+				542ACE3818AE0F74000D38EA /* ITAppDelegate.m in Sources */,
+				542ACE3A18AE0F74000D38EA /* ITSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +463,7 @@
 		};
 		542ACDDB18ADFE54000D38EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74F91329579F4244A49B5664 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -395,6 +477,7 @@
 		};
 		542ACDDC18ADFE54000D38EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74F91329579F4244A49B5664 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -467,6 +550,7 @@
 				542ACDDC18ADFE54000D38EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		542ACDDD18ADFE54000D38EA /* Build configuration list for PBXNativeTarget "YapBenchmarksTests" */ = {
 			isa = XCConfigurationList;
@@ -475,8 +559,22 @@
 				542ACDDF18ADFE54000D38EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		542ACE3618AE0F74000D38EA /* YapBenchmarks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				542ACE3718AE0F74000D38EA /* YapBenchmarks.xcdatamodel */,
+			);
+			currentVersion = 542ACE3718AE0F74000D38EA /* YapBenchmarks.xcdatamodel */;
+			path = YapBenchmarks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 542ACD9D18ADFE54000D38EA /* Project object */;
 }
