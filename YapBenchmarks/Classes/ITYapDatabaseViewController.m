@@ -30,7 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView registerClass:[ITTableViewCell class] forCellReuseIdentifier:@"core.data"];
+    [self.tableView registerClass:[ITTableViewCell class] forCellReuseIdentifier:@"yap.database"];
+    [self.searchDisplayController.searchResultsTableView registerClass:[ITTableViewCell class] forCellReuseIdentifier:@"yap.database"];
     [self updateTitle:@"YapDatabase"];
 }
 
@@ -141,7 +142,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"core.data" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"yap.database" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }

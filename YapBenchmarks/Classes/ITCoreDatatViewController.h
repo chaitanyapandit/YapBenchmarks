@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, readonly) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) NSMutableArray *searchResults;
 
 - (IBAction)load:(id)sender;
 

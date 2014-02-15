@@ -90,34 +90,98 @@
 {
     [super viewDidLoad];
     [self.tableView registerClass:[ITTableViewCell class] forCellReuseIdentifier:@"core.data"];
+    [self.searchDisplayController.searchResultsTableView registerClass:[ITTableViewCell class] forCellReuseIdentifier:@"core.data"];
     [self updateTitle:@"Core Data"];
+}
+
+#pragma mark - Search
+
+-(void)filter:(NSString*)text
+{
+    NSDate *referenceDate = [NSDate date];
+
+    // Create our fetch request
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    // Define the entity we are looking for
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Person" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Define how we want our entities to be sorted
+    NSSortDescriptor* sortDescriptor = [[NSSortDescriptor alloc]
+                                        initWithKey:@"name" ascending:YES];
+    NSArray* sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // If we are searching for anything...
+    if(text.length > 0)
+    {
+        // Define how we want our entities to be filtered
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(name CONTAINS[c] %@) OR (about CONTAINS[c] %@)", text, text];
+        [fetchRequest setPredicate:predicate];
+    }
+    
+    NSError *error;
+    
+    // Finally, perform the load
+    NSArray* loadedEntities = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    NSString *log = [NSString stringWithFormat:@"Search took %f sec", [[NSDate date] timeIntervalSinceDate:referenceDate]];
+    NSLog(@"%@", log);
+
+    self.searchResults = [[NSMutableArray alloc] initWithArray:loadedEntities];
+    
+    [self.tableView reloadData];
+}
+
+-(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text
+{
+    [self filter:text];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    self.searchResults = nil;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSInteger count = [self.fetchedResultsController sections].count;
+    NSInteger count = 1;
     return count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    NSInteger rows = [sectionInfo numberOfObjects];
+    NSInteger rows = 0;
+    
+    if (tableView == self.tableView)
+    {
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+        rows = [sectionInfo numberOfObjects];
+    }
+    else
+        rows = self.searchResults.count;
+    
     return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"core.data" forIndexPath:indexPath];
-    [self configureCell:cell atIndexPath:indexPath];
+
+    NSManagedObject *object = nil;
+    if (tableView == self.tableView)
+        object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    else
+        object = [self.searchResults objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [[object valueForKey:@"name"] description];
+    cell.detailTextLabel.text = [[object valueForKey:@"about"] description];
+
     return cell;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-
 }
 
 #pragma mark - Fetched results controller
@@ -163,11 +227,6 @@
      [self.tableView reloadData];
  }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"name"] description];
-    cell.detailTextLabel.text = [[object valueForKey:@"about"] description];
-}
+
 
 @end
