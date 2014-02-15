@@ -1,18 +1,18 @@
 //
-//  ITSecondViewController.m
+//  ITYapDatabaseViewController.m
 //  YapBenchmarks
 //
 //  Created by Chaitanya Pandit on 14/02/14.
 //  Copyright (c) 2014 #include tech. All rights reserved.
 //
 
-#import "ITSecondViewController.h"
+#import "ITYapDatabaseViewController.h"
 
-@interface ITSecondViewController ()
+@interface ITYapDatabaseViewController ()
 
 @end
 
-@implementation ITSecondViewController
+@implementation ITYapDatabaseViewController
 
 - (IBAction)load:(id)sender
 {

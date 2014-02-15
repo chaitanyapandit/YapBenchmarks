@@ -4,11 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--First View Controller - CoreData-->
+        <!--Core Datat View Controller - CoreData-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
-                <viewController title="CoreData" id="CZ4-MO-1fc" customClass="ITFirstViewController" sceneMemberID="viewController">
+                <viewController title="CoreData" id="CZ4-MO-1fc" customClass="ITCoreDatatViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CoreData" image="first" id="u1e-5L-l1D"/>
                     <navigationItem key="navigationItem" id="ti0-nO-Skx">
                         <barButtonItem key="rightBarButtonItem" title="Load" id="A5R-bd-nZQ">
@@ -18,6 +17,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1018" y="-272"/>
         </scene>
@@ -37,11 +37,10 @@
             </objects>
             <point key="canvasLocation" x="623" y="-272"/>
         </scene>
-        <!--Second View Controller - YapDatabase-->
+        <!--Yap Database View Controller - YapDatabase-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
-                <viewController title="YapDatabase" id="QUy-BD-bpt" customClass="ITSecondViewController" sceneMemberID="viewController">
+                <viewController title="YapDatabase" id="QUy-BD-bpt" customClass="ITYapDatabaseViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4YU-LQ-Ftp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,6 +62,7 @@
                         <outlet property="view" destination="4YU-LQ-Ftp" id="BAf-mw-irz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1018" y="514"/>
         </scene>

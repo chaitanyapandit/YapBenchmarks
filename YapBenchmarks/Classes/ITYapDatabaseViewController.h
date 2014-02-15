@@ -1,5 +1,5 @@
 //
-//  ITSecondViewController.h
+//  ITYapDatabaseViewControlle.h
 //  YapBenchmarks
 //
 //  Created by Chaitanya Pandit on 14/02/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ITSecondViewController : UITableViewController
+@interface ITYapDatabaseViewController : UITableViewController
 
 - (IBAction)load:(id)sender;
 

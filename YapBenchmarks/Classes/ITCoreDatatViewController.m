@@ -1,21 +1,21 @@
 //
-//  ITFirstViewController.m
+//  ITCoreDatatViewController.m
 //  YapBenchmarks
 //
 //  Created by Chaitanya Pandit on 14/02/14.
 //  Copyright (c) 2014 #include tech. All rights reserved.
 //
 
-#import "ITFirstViewController.h"
+#import "ITCoreDatatViewController.h"
 #import "ITAppDelegate.h"
 #import "Person.h"
 #import "ITTableViewCell.h"
 
-@interface ITFirstViewController ()
+@interface ITCoreDatatViewController ()
 
 @end
 
-@implementation ITFirstViewController
+@implementation ITCoreDatatViewController
 
 - (NSManagedObjectContext *)managedObjectContext
 {

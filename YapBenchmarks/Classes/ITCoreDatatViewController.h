@@ -1,5 +1,5 @@
 //
-//  ITFirstViewController.h
+//  ITCoreDatatViewController.h
 //  YapBenchmarks
 //
 //  Created by Chaitanya Pandit on 14/02/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface ITFirstViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface ITCoreDatatViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, readonly) NSManagedObjectContext *managedObjectContext;

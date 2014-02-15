@@ -21,8 +21,8 @@
 		542ACDD718ADFE54000D38EA /* YapBenchmarksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACDD618ADFE54000D38EA /* YapBenchmarksTests.m */; };
 		542ACDE318AE0EA9000D38EA /* dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = 542ACDE218AE0EA9000D38EA /* dummy.json */; };
 		542ACE3818AE0F74000D38EA /* ITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3018AE0F74000D38EA /* ITAppDelegate.m */; };
-		542ACE3918AE0F74000D38EA /* ITFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3218AE0F74000D38EA /* ITFirstViewController.m */; };
-		542ACE3A18AE0F74000D38EA /* ITSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3418AE0F74000D38EA /* ITSecondViewController.m */; };
+		542ACE3918AE0F74000D38EA /* ITCoreDatatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3218AE0F74000D38EA /* ITCoreDatatViewController.m */; };
+		542ACE3A18AE0F74000D38EA /* ITYapDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3418AE0F74000D38EA /* ITYapDatabaseViewController.m */; };
 		542ACE3B18AE0F74000D38EA /* YapBenchmarks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 542ACE3618AE0F74000D38EA /* YapBenchmarks.xcdatamodeld */; };
 		54B1AE3E18AF08D7001538FA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54B1AE3D18AF08D7001538FA /* CoreData.framework */; };
 		54B1AE4118AF1977001538FA /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1AE4018AF1977001538FA /* Person.m */; };
@@ -60,10 +60,10 @@
 		542ACDE218AE0EA9000D38EA /* dummy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummy.json; sourceTree = "<group>"; };
 		542ACE2F18AE0F74000D38EA /* ITAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITAppDelegate.h; sourceTree = "<group>"; };
 		542ACE3018AE0F74000D38EA /* ITAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITAppDelegate.m; sourceTree = "<group>"; };
-		542ACE3118AE0F74000D38EA /* ITFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITFirstViewController.h; sourceTree = "<group>"; };
-		542ACE3218AE0F74000D38EA /* ITFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITFirstViewController.m; sourceTree = "<group>"; };
-		542ACE3318AE0F74000D38EA /* ITSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITSecondViewController.h; sourceTree = "<group>"; };
-		542ACE3418AE0F74000D38EA /* ITSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITSecondViewController.m; sourceTree = "<group>"; };
+		542ACE3118AE0F74000D38EA /* ITCoreDatatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITCoreDatatViewController.h; sourceTree = "<group>"; };
+		542ACE3218AE0F74000D38EA /* ITCoreDatatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITCoreDatatViewController.m; sourceTree = "<group>"; };
+		542ACE3318AE0F74000D38EA /* ITYapDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITYapDatabaseViewController.h; sourceTree = "<group>"; };
+		542ACE3418AE0F74000D38EA /* ITYapDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITYapDatabaseViewController.m; sourceTree = "<group>"; };
 		542ACE3718AE0F74000D38EA /* YapBenchmarks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YapBenchmarks.xcdatamodel; sourceTree = "<group>"; };
 		54B1AE3D18AF08D7001538FA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		54B1AE3F18AF1977001538FA /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -187,10 +187,10 @@
 			children = (
 				542ACE2F18AE0F74000D38EA /* ITAppDelegate.h */,
 				542ACE3018AE0F74000D38EA /* ITAppDelegate.m */,
-				542ACE3118AE0F74000D38EA /* ITFirstViewController.h */,
-				542ACE3218AE0F74000D38EA /* ITFirstViewController.m */,
-				542ACE3318AE0F74000D38EA /* ITSecondViewController.h */,
-				542ACE3418AE0F74000D38EA /* ITSecondViewController.m */,
+				542ACE3118AE0F74000D38EA /* ITCoreDatatViewController.h */,
+				542ACE3218AE0F74000D38EA /* ITCoreDatatViewController.m */,
+				542ACE3318AE0F74000D38EA /* ITYapDatabaseViewController.h */,
+				542ACE3418AE0F74000D38EA /* ITYapDatabaseViewController.m */,
 				54B1AE4218AF228B001538FA /* ITTableViewCell.h */,
 				54B1AE4318AF228B001538FA /* ITTableViewCell.m */,
 			);
@@ -350,12 +350,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B1AE4118AF1977001538FA /* Person.m in Sources */,
-				542ACE3918AE0F74000D38EA /* ITFirstViewController.m in Sources */,
+				542ACE3918AE0F74000D38EA /* ITCoreDatatViewController.m in Sources */,
 				542ACDB518ADFE54000D38EA /* main.m in Sources */,
 				542ACE3B18AE0F74000D38EA /* YapBenchmarks.xcdatamodeld in Sources */,
 				54B1AE4418AF228B001538FA /* ITTableViewCell.m in Sources */,
 				542ACE3818AE0F74000D38EA /* ITAppDelegate.m in Sources */,
-				542ACE3A18AE0F74000D38EA /* ITSecondViewController.m in Sources */,
+				542ACE3A18AE0F74000D38EA /* ITYapDatabaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
