@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface ITFirstViewController : UIViewController
+@interface ITFirstViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, readonly) NSManagedObjectContext *managedObjectContext;
+
+- (IBAction)load:(id)sender;
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ITSecondViewController : UIViewController
+@interface ITSecondViewController : UITableViewController
+
+- (IBAction)load:(id)sender;
 
 @end
