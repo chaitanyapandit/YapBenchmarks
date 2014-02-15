@@ -50,16 +50,15 @@
     
     referenceDate = [NSDate date];
     [self insertPeople:people];
-  
+
     insertionTime = [[NSDate date] timeIntervalSinceDate:referenceDate];
     NSString *log = [NSString stringWithFormat:@"Insertions took %f sec", insertionTime];
     NSLog(@"%@", log);
     
-    referenceDate = [NSDate date];
-    
     log = [NSString stringWithFormat:@"Took %f sec", insertionTime];
     NSLog(@"%@", log);
     [self updateTitle:log];
+    [self.tableView reloadData];
 }
 
 - (void)insertPeople:(NSArray *)people
@@ -104,6 +103,65 @@
     };
     
     self.dbView = [[YapDatabaseView alloc] initWithGroupingBlock:groupingBlock groupingBlockType:YapDatabaseViewBlockTypeWithObject sortingBlock:sortingBlock sortingBlockType:YapDatabaseViewBlockTypeWithObject];
+    [self.db registerExtension:self.dbView withName:@"people.collection"];
+    
+    [self initializeSearch];
+}
+
+- (void)initializeSearch
+{
+    NSArray *peopertiesToSearch = @[@"search.name", @"search.about"];
+    YapDatabaseFullTextSearchWithObjectBlock searchBlock = ^(NSMutableDictionary *dict, NSString *collection, NSString *key, YAPPerson *person){
+        [dict setObject:person.name forKey:@"search.name"];
+        [dict setObject:person.about forKey:@"search.about"];
+    };
+    
+    self.peopleSearch = [[YapDatabaseFullTextSearch alloc] initWithColumnNames:peopertiesToSearch block:searchBlock blockType:YapDatabaseFullTextSearchBlockTypeWithObject];
+    [self.db registerExtension:self.peopleSearch withName:@"people.search"];
+}
+
+#pragma mark - Table View
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    __block NSInteger count = 1;
+
+    return count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    __block NSInteger rows = 0;
+    [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
+        rows = [transaction numberOfKeysInCollection:@"people"];
+    }];
+    
+    return rows;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"core.data" forIndexPath:indexPath];
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    __block YAPPerson *person = nil;
+    [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
+
+        person = [[transaction ext:@"people.collection"] objectAtIndex:indexPath.row inGroup:@"people"];
+
+    }];
+    
+    cell.textLabel.text = [[person valueForKey:@"name"] description];
+    cell.detailTextLabel.text = [[person valueForKey:@"about"] description];
 }
 
 @end

@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <Yapdatabase/YapDatabase.h>
 #import <Yapdatabase/YapDatabaseView.h>
+#import <Yapdatabase/YapDatabaseFullTextSearch.h>
 
 @interface ITYapDatabaseViewController : UITableViewController
 
 @property (nonatomic, strong) YapDatabase *db;
 @property (nonatomic, strong) YapDatabaseConnection *dbConnection;
 @property (nonatomic, strong) YapDatabaseView *dbView;
+@property (nonatomic, strong) YapDatabaseFullTextSearch *peopleSearch;
 
 - (IBAction)load:(id)sender;
 
