@@ -121,6 +121,39 @@
     [self.db registerExtension:self.peopleSearch withName:@"people.search"];
 }
 
+-(void)filter:(NSString*)text
+{
+    NSDate *referenceDate = [NSDate date];
+    
+    self.searchResults = [[NSMutableArray alloc] initWithCapacity:100];
+    [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
+        
+        [[transaction ext:@"people.search"] enumerateKeysAndObjectsMatching:[NSString stringWithFormat:@"%@*", text] usingBlock:^(NSString *collection, NSString *key, YAPPerson *person, BOOL *stop) {
+            
+            [self.searchResults addObject:person];
+        }];
+    }];
+    
+
+    NSString *log = [NSString stringWithFormat:@"Search took %f sec", [[NSDate date] timeIntervalSinceDate:referenceDate]];
+    NSLog(@"%@", log);
+    
+    [self.tableView reloadData];
+}
+
+-(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text
+{
+    if (text.length > 1)
+        [self filter:text];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    self.searchResults = nil;
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -133,9 +166,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     __block NSInteger rows = 0;
-    [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
-        rows = [transaction numberOfKeysInCollection:@"people"];
-    }];
+    
+    if (tableView == self.tableView)
+    {
+        [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
+            rows = [transaction numberOfKeysInCollection:@"people"];
+        }];
+    }
+    else
+    {
+        rows = self.searchResults.count;
+    }
     
     return rows;
 }
@@ -143,26 +184,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"yap.database" forIndexPath:indexPath];
-    [self configureCell:cell atIndexPath:indexPath];
-    return cell;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    
-}
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
     __block YAPPerson *person = nil;
-    [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
 
-        person = [[transaction ext:@"people.collection"] objectAtIndex:indexPath.row inGroup:@"people"];
-
-    }];
+    if (tableView == self.tableView)
+    {
+        [self.dbConnection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
+            
+            person = [[transaction ext:@"people.collection"] objectAtIndex:indexPath.row inGroup:@"people"];
+            
+        }];
+    }
+    else
+        person = [self.searchResults objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [[person valueForKey:@"name"] description];
     cell.detailTextLabel.text = [[person valueForKey:@"about"] description];
+
+    return cell;
+}
+
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
 }
 
 @end

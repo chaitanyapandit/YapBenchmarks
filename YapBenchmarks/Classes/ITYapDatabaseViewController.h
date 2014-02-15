@@ -17,6 +17,7 @@
 @property (nonatomic, strong) YapDatabaseConnection *dbConnection;
 @property (nonatomic, strong) YapDatabaseView *dbView;
 @property (nonatomic, strong) YapDatabaseFullTextSearch *peopleSearch;
+@property (strong, nonatomic) NSMutableArray *searchResults;
 
 - (IBAction)load:(id)sender;
 

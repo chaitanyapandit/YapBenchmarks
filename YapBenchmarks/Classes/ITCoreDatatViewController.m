@@ -135,7 +135,8 @@
 
 -(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text
 {
-    [self filter:text];
+    if (text.length > 1)
+        [self filter:text];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
