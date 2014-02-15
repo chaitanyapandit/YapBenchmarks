@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54022F9718AF2A1C00AF7145 /* YAPPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 54022F9618AF2A1C00AF7145 /* YAPPerson.m */; };
 		542ACDA918ADFE54000D38EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542ACDA818ADFE54000D38EA /* Foundation.framework */; };
 		542ACDAB18ADFE54000D38EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542ACDAA18ADFE54000D38EA /* CoreGraphics.framework */; };
 		542ACDAD18ADFE54000D38EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542ACDAC18ADFE54000D38EA /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		13108632914841CA8B6B9126 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		54022F9518AF2A1C00AF7145 /* YAPPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAPPerson.h; sourceTree = "<group>"; };
+		54022F9618AF2A1C00AF7145 /* YAPPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAPPerson.m; sourceTree = "<group>"; };
 		542ACDA518ADFE54000D38EA /* YapBenchmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YapBenchmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		542ACDA818ADFE54000D38EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		542ACDAA18ADFE54000D38EA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -203,6 +206,8 @@
 				542ACE3618AE0F74000D38EA /* YapBenchmarks.xcdatamodeld */,
 				54B1AE3F18AF1977001538FA /* Person.h */,
 				54B1AE4018AF1977001538FA /* Person.m */,
+				54022F9518AF2A1C00AF7145 /* YAPPerson.h */,
+				54022F9618AF2A1C00AF7145 /* YAPPerson.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +361,7 @@
 				54B1AE4418AF228B001538FA /* ITTableViewCell.m in Sources */,
 				542ACE3818AE0F74000D38EA /* ITAppDelegate.m in Sources */,
 				542ACE3A18AE0F74000D38EA /* ITYapDatabaseViewController.m in Sources */,
+				54022F9718AF2A1C00AF7145 /* YAPPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

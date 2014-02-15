@@ -56,7 +56,7 @@
     log = [NSString stringWithFormat:@"Saving took %f sec", saveTime];
     NSLog(@"%@", log);
 
-    log = [NSString stringWithFormat:@"Total %f sec", insertionTime+saveTime];
+    log = [NSString stringWithFormat:@"Took %f sec", insertionTime+saveTime];
     NSLog(@"%@", log);
     [self updateTitle:log];
 }

@@ -46,8 +46,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
-                            <outlet property="dataSource" destination="QUy-BD-bpt" id="48Q-k9-Kd2"/>
-                            <outlet property="delegate" destination="QUy-BD-bpt" id="wcP-fR-rvd"/>
+                            <outlet property="dataSource" destination="QUy-BD-bpt" id="CA8-4E-xfs"/>
+                            <outlet property="delegate" destination="QUy-BD-bpt" id="MUi-rs-J65"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="YapDatabase" image="second" id="Z7h-1E-pvt"/>
