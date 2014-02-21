@@ -106,7 +106,8 @@
     self.dbView = [[YapDatabaseView alloc] initWithGroupingBlock:groupingBlock groupingBlockType:YapDatabaseViewBlockTypeWithObject sortingBlock:sortingBlock sortingBlockType:YapDatabaseViewBlockTypeWithObject];
     [self.db registerExtension:self.dbView withName:@"people.collection"];
     
-    [self initializeSearch];
+#warning Uncomment to enable search
+   //  [self initializeSearch];
 }
 
 - (void)initializeSearch
